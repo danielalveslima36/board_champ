@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => PartidaPage(),
+        '/': (context) => LoginPage(),
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignupPage(),
         '/register_user': (context) => RegisterUserPage(),
