@@ -37,9 +37,7 @@ class _PartidaPageState extends State<PartidaPage> {
                         const Text(
                           "Alana",
                           style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w900
-                          ),
+                              fontSize: 15, fontWeight: FontWeight.w900),
                         ),
                         Container(
                           height: 50,
@@ -64,9 +62,7 @@ class _PartidaPageState extends State<PartidaPage> {
                         const Text(
                           "Alana",
                           style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w900
-                          ),
+                              fontSize: 15, fontWeight: FontWeight.w900),
                         ),
                         Container(
                           height: 50,
@@ -97,35 +93,44 @@ class _PartidaPageState extends State<PartidaPage> {
                           children: [
                             Text(
                               "Round ${entries[index]}",
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w900
-                              ),
-                              ),
-                            Container(
-                              height: 20,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(color: Colors.grey)),
-                              child: const Center(
-                                  child: Text(
-                                "45",
-                                style: TextStyle(fontSize: 15),
-                              )),
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w900),
                             ),
+                            Container(
+                                height: 20,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.grey)),
+                                child: const Center(
+                                  child: TextField(
+                                    keyboardType: TextInputType.number,
+                                    decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: '0',
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                )),
                             Text("X"),
                             Container(
-                              height: 20,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(color: Colors.grey)),
-                              child: const Center(
-                                  child: Text(
-                                "45",
-                                style: TextStyle(fontSize: 15),
-                              )),
-                            ),
+                                height: 20,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.grey)),
+                                child: const Center(
+                                  child: TextField(
+                                    keyboardType: TextInputType.number,
+                                    decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: '0',
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                )),
                           ],
                         ),
                       );
@@ -137,7 +142,6 @@ class _PartidaPageState extends State<PartidaPage> {
                   },
                   child: const Text(
                     'Salvar',
-                  
                   ),
                 ),
               ]),
