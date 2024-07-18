@@ -72,6 +72,9 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _login,
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(Colors.blueAccent.shade100)
+                  ),
                   child: Text('Login'),
                 ),
                 TextButton(
