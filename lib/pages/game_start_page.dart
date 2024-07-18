@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:teste/models/player.dart';
+import 'package:teste/pages/pairing_page.dart';
 
 class GameStartPage extends StatelessWidget {
   final String championshipName;
   final List<Player> players;
 
   GameStartPage({required this.championshipName, required this.players});
+
+  void _pairingPlayers(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => PairingPage(players: players),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +39,20 @@ class GameStartPage extends StatelessWidget {
                 itemCount: players.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text('${players[index].name} - Squad: ${players[index].squad}'),
+                    title: Text(
+                        '${players[index].name} - Squad: ${players[index]
+                            .squad}'),
                   );
                 },
               ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => _pairingPlayers(context),
+              child: Text('Sorteio'),
             ),
           ],
         ),
       ),
     );
-  }
-}
+  }}
