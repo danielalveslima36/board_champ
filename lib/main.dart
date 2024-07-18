@@ -7,7 +7,6 @@ import 'pages/login.dart';
 import 'pages/signup.dart';
 import 'pages/register_user.dart';
 
-
 import 'package:flutter/material.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
 
@@ -21,9 +20,9 @@ void main() async {
   await Parse().initialize(keyApplicationId, keyParseServerUrl,
       clientKey: keyClientKey, debug: true);
 
-
-void main() {
-  runApp(MyApp());
+  void main() {
+    runApp(MyApp());
+  }
 }
 
 class MyApp extends StatelessWidget {
