@@ -19,9 +19,7 @@ void main() async {
   await Parse().initialize(keyApplicationId, keyParseServerUrl,
       clientKey: keyClientKey, debug: true);
 
-  void main() {
-    runApp(MyApp());
-  }
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
